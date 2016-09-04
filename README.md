@@ -1,3 +1,5 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/wpcyyci46xsinjm1/branch/master?svg=true)](https://ci.appveyor.com/project/urbas/bud-reactive/branch/master)
+
 __Table of contents__
 
 * [About](#about)
