@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Bud.Reactive</id>
+    <version>1.0.0</version>
+    <title>Bud.Reactive</title>
+    <authors>Matej Urbas</authors>
+    <owners>Matej Urbas</owners>
+    <licenseUrl>https://github.com/urbas/Bud.Reactive/blob/master/LICENCE.md</licenseUrl>
+    <projectUrl>https://github.com/urbas/Bud.Reactive</projectUrl>
+    <iconUrl>https://ci.appveyor.com/api/projects/status/r09w19qpguhsv28c/branch/master</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Bud.Reactive is a set of calming and option-gathering extension methods for the IObservable type of .NET Reactive Extensions.</description>
+    <releaseNotes>
+      First major release.
+    </releaseNotes>
+    <copyright>Copyright 2016</copyright>
+    <tags>Bud.Reactive initial release.</tags>
+    <dependencies>
+      <dependency id="Bud.Option" version="1.0.1" />
+      <dependency id="System.Collections.Immutable" version="1.2.0" />
+      <dependency id="System.Reactive.Core" version="3.0.0" />
+      <dependency id="System.Reactive.Interfaces" version="3.0.0" />
+      <dependency id="System.Reactive.Linq" version="3.0.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="bin/Debug/Bud.Reactive.dll" target="lib/net46" />
+    <file src="bin/Debug/Bud.Reactive.xml" target="lib/net46" />
+  </files>
+</package>
