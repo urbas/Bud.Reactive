@@ -2,6 +2,9 @@
 using System.Reactive.Linq;
 
 namespace Bud.Reactive {
+  /// <summary>
+  ///   Option-gathering extension methods for <see cref="IObservable{T}" />.
+  /// </summary>
   public static class ObservableOptions {
     /// <summary>
     ///   This method discards from the original observable all options without values.

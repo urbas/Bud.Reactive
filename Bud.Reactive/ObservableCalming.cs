@@ -9,6 +9,9 @@ using System.Reactive.Subjects;
 using static Bud.Option;
 
 namespace Bud.Reactive {
+  /// <summary>
+  ///   Calming extension methods for <see cref="IObservable{T}"/>.
+  /// </summary>
   public static class ObservableCalming {
     /// <summary>
     ///   Transforms the given <paramref name="observable" /> into a new observable. The new observable
