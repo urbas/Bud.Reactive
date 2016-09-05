@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Bud.Reactive</id>
-    <version>1.0.0-rc1</version>
+    <version>1.0.0</version>
     <title>Bud.Reactive</title>
     <authors>Matej Urbas</authors>
     <owners>Matej Urbas</owners>
