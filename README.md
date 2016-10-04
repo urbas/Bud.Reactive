@@ -21,7 +21,7 @@ These are the currently available calming methods:
 var resulting = original.CalmedBatches(TimeSpan.FromMilliseconds(5));
 ```
 
-This method keeps collecting elements from the original observable until no new element arrives for a specific amount of time. At this instant it passes the array of collected elements to the resulting observable, and starts collecting elements again.
+This method keeps collecting elements from the original observable until no new element arrives for a specific amount of time (called "calming period"). Immediately after the calming period is over, the method passes the array of collected elements to the resulting observable, and starts collecting elements again.
 
 Note that the resulting observable will never contain empty arrays.
 
@@ -76,7 +76,7 @@ Resulting observable:
 var resulting = original.FirstThenCalmed(TimeSpan.FromMilliseconds(5));
 ```
 
-This method is similar to `Calmed` with the difference that this method passes through the first element and then starts to behave exactly the same as `Calmed`.
+This method is similar to `Calmed` with the difference that this method immediately passes through the first element and then starts to behave exactly the same as `Calmed`.
 
 ```
 Resulting observable:
@@ -97,7 +97,7 @@ Original observable:
 
 ## Gathering
 
-The observable gathering API provides an overloaded extension method that works with observables in conjunction with option types.
+The observable gathering API provides extension methods for observables and option types.
 
 ```csharp
 IObservable<T> Gather<T>(this IObservable<Option<T>> observable);
@@ -106,6 +106,6 @@ IObservable<TResult> Gather<TSource, TResult>(this IObservable<TSource> observab
                                               Func<TSource, Option<TResult>> selector)
 ```
 
-The first overload discards from the original observable all options without values. Options with values are not discarded. Their contained values are passed to the resulting observable.
+The first method discards all options without values from the original observable. Options with values are not discarded. Their contained values are passed to the returned observable.
 
-The second overload first applies a selector function on each element of the original observable. The selector function returns an option. This option is discarded if it contains no value. Otherwise the element contained in it is passed on to the resulting observable.
+The second method applies a selector function on each element of the original observable. The selector function returns an option. This option is discarded if it contains no value. Otherwise the element contained in the option is passed on to the returned observable.
