@@ -25,7 +25,7 @@ This method keeps collecting elements from the original observable until no new 
 
 Note that the resulting observable will never contain empty arrays.
 
-The following timelines illustrates the behaviour of this method:
+The following timelines illustrate the behaviour of this method:
 
 ```
 Original observable:
