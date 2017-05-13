@@ -25,7 +25,7 @@ This method keeps collecting elements from the original observable until no new 
 
 Note that the resulting observable will never contain empty arrays.
 
-The following timelines illustrate the behaviour of this method:
+The following timelines illustrate the behaviour of this method with a calming period of 5ms:
 
 ```
 Original observable:
